@@ -1,0 +1,85 @@
+---
+---
+<section class="hero">
+	<div class="content">
+		<h1>Automatisez votre avenir</h1>
+		<p>Solutions d'automatisation innovantes pour les entreprises modernes</p>
+		<div class="cta-buttons">
+			<a href="#contact" class="primary-btn">Commencer</a>
+			<a href="#services" class="secondary-btn">Nos Services</a>
+		</div>
+	</div>
+	<div class="background-pattern"></div>
+</section>
+
+<style>
+	.hero {
+		min-height: 90vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		padding: 2rem;
+	}
+
+	.content {
+		text-align: center;
+		z-index: 1;
+		max-width: 800px;
+	}
+
+	h1 {
+		font-size: clamp(3rem, 8vw, 5rem);
+		font-weight: 700;
+		color: rgb(var(--primary));
+		margin: 0;
+		line-height: 1.1;
+	}
+
+	p {
+		font-size: clamp(1.2rem, 3vw, 1.5rem);
+		margin: 1.5rem 0 2.5rem;
+		color: rgb(var(--text));
+		opacity: 0.9;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.primary-btn, .secondary-btn {
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		font-weight: 500;
+		transition: transform 0.2s;
+	}
+
+	.primary-btn:hover, .secondary-btn:hover {
+		transform: translateY(-2px);
+	}
+
+	.primary-btn {
+		background: rgb(var(--accent));
+		color: white;
+	}
+
+	.secondary-btn {
+		border: 2px solid rgb(var(--accent));
+		color: rgb(var(--accent));
+	}
+
+	.background-pattern {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(120deg, rgba(var(--accent), 0.1) 0%, rgba(var(--primary), 0.1) 100%);
+		z-index: 0;
+	}
+</style>

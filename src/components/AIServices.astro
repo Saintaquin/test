@@ -1,0 +1,152 @@
+---
+const services = [
+    {
+        title: "Gestion mail",
+        description: "Automatisation du tri, des réponses et du suivi des emails pour une boîte de réception optimisée"
+    },
+    {
+        title: "Gestion de données",
+        description: "Analyse et traitement intelligent des données pour des insights stratégiques"
+    },
+    {
+        title: "Optimisation des CRM",
+        description: "Amélioration de l'efficacité de votre CRM grâce à l'intelligence artificielle"
+    },
+    {
+        title: "Gestion clients",
+        description: "Personnalisation et automatisation des interactions clients à grande échelle"
+    },
+    {
+        title: "Campagne marketing",
+        description: "Optimisation et automatisation de vos campagnes marketing multicanal"
+    },
+    {
+        title: "Prospection",
+        description: "Identification et qualification automatique des prospects à fort potentiel"
+    },
+    {
+        title: "Processus RH",
+        description: "Simplification et automatisation des tâches RH récurrentes"
+    }
+];
+---
+
+<section class="ai-services">
+    <h2>Grâce à l'IA on peut vous aider dans :</h2>
+    <div class="services-container">
+        {services.map((service, index) => (
+            <div class="service-item" style={`animation-delay: ${index * 0.1}s`}>
+                <div class="service-content">
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                </div>
+                <div class="service-number">{(index + 1).toString().padStart(2, '0')}</div>
+            </div>
+        ))}
+    </div>
+</section>
+
+<style>
+    .ai-services {
+        padding: 6rem 2rem;
+        background: white;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: rgb(var(--primary));
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: rgb(var(--accent));
+        border-radius: 2px;
+    }
+
+    .services-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .service-item {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.5rem;
+        background: rgb(var(--background));
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        animation: slideIn 0.5s ease forwards;
+        opacity: 0;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .service-item:hover {
+        transform: translateX(10px);
+        background: white;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-content {
+        flex: 1;
+    }
+
+    .service-number {
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(var(--accent));
+        opacity: 0.5;
+    }
+
+    h3 {
+        color: rgb(var(--primary));
+        margin: 0 0 0.5rem 0;
+        font-size: 1.25rem;
+    }
+
+    p {
+        color: rgb(var(--text));
+        margin: 0;
+        opacity: 0.8;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .service-item {
+            flex-direction: column-reverse;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .service-number {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+</style>

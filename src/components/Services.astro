@@ -1,0 +1,82 @@
+---
+const services = [
+	{
+		title: "Automatisation Industrielle",
+		description: "Solutions sur mesure pour optimiser vos processus de production",
+		icon: "🏭"
+	},
+	{
+		title: "Intelligence Artificielle",
+		description: "Intégration d'IA pour des décisions plus intelligentes",
+		icon: "🤖"
+	},
+	{
+		title: "IoT & Connectivité",
+		description: "Connectez vos équipements pour une meilleure performance",
+		icon: "📡"
+	}
+];
+---
+<section id="services" class="services">
+	<h2>Nos Services</h2>
+	<div class="services-grid">
+		{services.map(service => (
+			<div class="service-card">
+				<div class="icon">{service.icon}</div>
+				<h3>{service.title}</h3>
+				<p>{service.description}</p>
+			</div>
+		))}
+	</div>
+</section>
+
+<style>
+	.services {
+		padding: 6rem 2rem;
+		background: white;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 2.5rem;
+		color: rgb(var(--primary));
+		margin-bottom: 3rem;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.service-card {
+		padding: 2rem;
+		border-radius: 1rem;
+		background: rgb(var(--background));
+		transition: transform 0.3s;
+		text-align: center;
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		color: rgb(var(--primary));
+		margin: 0.5rem 0;
+	}
+
+	p {
+		color: rgb(var(--text));
+		opacity: 0.8;
+		margin: 0;
+		line-height: 1.6;
+	}
+</style>

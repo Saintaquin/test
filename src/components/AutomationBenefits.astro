@@ -1,0 +1,221 @@
+---
+const reasons = [
+    {
+        number: "01",
+        title: "Efficacité Opérationnelle",
+        description: "Réduction de 70% du temps opérationnel avec l'automatisation des tâches répétitives"
+    },
+    {
+        number: "02",
+        title: "Réduction des Coûts",
+        description: "Économies moyennes de 40% sur les coûts opérationnels après l'automatisation"
+    },
+    {
+        number: "03",
+        title: "Qualité Supérieure",
+        description: "Réduction de 90% des erreurs humaines grâce à l'automatisation"
+    },
+    {
+        number: "04",
+        title: "Disponibilité 24/7",
+        description: "Fonctionnement continu sans interruption ni fatigue"
+    },
+    {
+        number: "05",
+        title: "Scalabilité",
+        description: "Capacité à gérer 10x plus d'opérations sans augmentation proportionnelle des coûts"
+    },
+    {
+        number: "06",
+        title: "Analyse des Données",
+        description: "Collecte et analyse en temps réel de millions de points de données"
+    },
+    {
+        number: "07",
+        title: "Conformité",
+        description: "Suivi automatique et documentation complète pour la conformité réglementaire"
+    },
+    {
+        number: "08",
+        title: "Satisfaction Client",
+        description: "Amélioration de 60% de la satisfaction client grâce à des réponses instantanées"
+    },
+    {
+        number: "09",
+        title: "Innovation",
+        description: "Libération des ressources pour se concentrer sur l'innovation et la créativité"
+    },
+    {
+        number: "10",
+        title: "Avantage Concurrentiel",
+        description: "Position dominante sur le marché grâce à l'efficacité opérationnelle"
+    }
+];
+---
+
+<section class="benefits">
+    <div class="transformation">
+        <h2>La Transformation par l'Automatisation</h2>
+        <div class="modules">
+            <div class="module">
+                <div class="before">
+                    <h3>Avant</h3>
+                    <ul>
+                        <li>Processus manuels chronophages</li>
+                        <li>Erreurs humaines fréquentes</li>
+                        <li>Coûts opérationnels élevés</li>
+                        <li>Temps de réponse lents</li>
+                    </ul>
+                </div>
+                <div class="arrow">→</div>
+                <div class="after">
+                    <h3>Après</h3>
+                    <ul>
+                        <li>Processus automatisés rapides</li>
+                        <li>Précision maximale</li>
+                        <li>Réduction significative des coûts</li>
+                        <li>Réponses instantanées</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reasons">
+        <h2>Top 10 Raisons d'Automatiser en 2025</h2>
+        <div class="reasons-grid">
+            {reasons.map(reason => (
+                <div class="reason-card">
+                    <div class="number">{reason.number}</div>
+                    <h3>{reason.title}</h3>
+                    <p>{reason.description}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .benefits {
+        padding: 6rem 2rem;
+        background: rgb(var(--background));
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: rgb(var(--primary));
+        margin-bottom: 3rem;
+    }
+
+    .transformation {
+        max-width: 1200px;
+        margin: 0 auto 6rem;
+    }
+
+    .module {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .before, .after {
+        flex: 1;
+        padding: 2rem;
+    }
+
+    .arrow {
+        font-size: 2rem;
+        color: rgb(var(--accent));
+        font-weight: bold;
+    }
+
+    .before {
+        background: rgba(var(--primary), 0.05);
+        border-radius: 0.5rem;
+    }
+
+    .after {
+        background: rgba(var(--accent), 0.05);
+        border-radius: 0.5rem;
+    }
+
+    h3 {
+        color: rgb(var(--primary));
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    li:before {
+        content: "•";
+        color: rgb(var(--accent));
+        position: absolute;
+        left: 0;
+    }
+
+    .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .reason-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .reason-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: rgb(var(--accent));
+        margin-bottom: 1rem;
+    }
+
+    .reason-card h3 {
+        font-size: 1.25rem;
+        margin: 0.5rem 0;
+    }
+
+    .reason-card p {
+        color: rgb(var(--text));
+        opacity: 0.8;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .module {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .arrow {
+            transform: rotate(90deg);
+        }
+    }
+</style>
